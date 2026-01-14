@@ -32,7 +32,3 @@ This project shows how low-level backend programming in C can be connected with 
 - Compiler: GCC (MinGW)
 - Networking: Winsock (Windows)
 - Frontend: HTML, CSS, JavaScript
-
-
-## 📂 Project Structure
-
