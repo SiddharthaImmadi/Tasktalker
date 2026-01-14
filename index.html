@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskTalker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-header">
+        <span class="logo-text">TaskTalker</span>
+    </div>
+    <div class="container">
+        <!-- Left Panel: Add Task -->
+        <div class="panel left-panel">
+            <h1>New Task</h1>
+            <form id="taskForm">
+                <div class="form-group">
+                    <labelFor="name">Task Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter Task Name">
+                </div>
+                <div class="form-group">
+                    <labelFor="description">Description</label>
+                        <textarea id="description" name="description" rows="3"
+                            placeholder="Brief details..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <labelFor="due_date">Date</label>
+                            <input type="date" id="due_date" name="due_date" optional>
+                    </div>
+                    <div class="form-group">
+                        <labelFor="due_time">Time</label>
+                            <input type="time" id="due_time" name="due_time" optional>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <labelFor="priority">Priority level</label>
+                        <select id="priority" name="priority">
+                            <option value="Low">Low</option>
+                            <option value="Medium">Medium</option>
+                            <option value="High">High</option>
+                        </select>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn-primary">Add Task</button>
+                    <button type="button" id="btnCancel" class="btn-secondary" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Panel: Task List -->
+        <div class="panel right-panel">
+            <div class="header-row">
+                <div class="header-left">
+                    <h1>My Tasks</h1>
+                    <span id="task_count">0 Tasks</span>
+                </div>
+                <div class="header-actions">
+                    <input type="text" id="searchInput" placeholder="Search tasks..." class="search-input">
+                    <button id="themeToggle" class="btn-icon">☀️</button>
+                </div>
+            </div>
+            <div id="taskList" class="task-list">
+                <!-- Tasks injected here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
